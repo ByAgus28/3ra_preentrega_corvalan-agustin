@@ -1,0 +1,69 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    position: relative;
+    padding-bottom: 300px;
+    min-height: 100vh;
+}
+
+/* HEADER HERO */
+#hero {
+    background-image: url("/img/hero-2.jpeg");
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+/* BANNER TEXT */
+.banner_text {
+    color: white;
+    font-size: 30px;
+    margin-left: 50px;
+    margin-top: 60px;
+    border-bottom: 3px solid white;
+    max-width: 100px;
+}
+
+/* NAVEGATION */
+.nav_menu {
+    width: 100%;
+    padding: 10px 57px;
+}
+
+.nav_menu ul li {
+    padding: 10px;
+    display: inline-block;
+    padding: 20px 70px;
+}
+
+.nav_menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+/* CONTACT */
+.contact {
+    display: block;
+    padding: 20px;
+}
+
+/* FOOTER */
+footer {
+    background-color: black;
+    color: white;
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    padding: 20px;
+    bottom: 0;
+}
