@@ -82,7 +82,7 @@ li {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("/img/antiguedades.jpg");
+    url("../img/antiguedades.jpg");
   transition: all 0.1s ease-in-out;
   animation: hero 28s infinite linear;
 }
@@ -265,7 +265,7 @@ main {
   height: 350px;
   width: 87%;
   margin: 0 auto;
-  background-image: url(/img/foto-quinqué.jpg);
+  background-image: url("../img/foto-quinqué.jpg");
   background-size: cover;
   background-position: center;
   grid-area: img_quienes-somos;
