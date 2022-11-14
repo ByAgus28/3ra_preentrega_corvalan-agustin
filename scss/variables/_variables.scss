@@ -1,0 +1,18 @@
+$color-principal: rgb(211, 110, 112);
+$color-secundario: #7ec59d;
+$background-sections: rgb(239, 239, 239);
+$border-buttons: 1px solid rgb(211, 110, 112);
+$border-buttons-secundarios: 1px solid #7ec59d;
+$tamaño-tablet: 768px;
+$tamaño-desktop: 1024px;
+
+@mixin button($background-color, $color, $tamaño) {
+    background-color: $background-color;
+    color: $color;
+    font-size: $tamaño;
+}
+
+.button .description {
+    @include button(#be9858, white, 16px);
+    margin-left: 0;
+}

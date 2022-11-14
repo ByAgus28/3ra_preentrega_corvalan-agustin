@@ -1,156 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/productos.css" />
-    <title>El Quinqué - Productos</title>
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header id="hero">
-      <nav class="nav_menu">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a href="galería.html">Galería</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-      <div class="banner_text">
-        <h1>Productos</h1>
-      </div>
-    </header>
-    <!-- END HEADER -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="language" content="spanish">
+  <meta name="copyright" content="El Quinque">
+  <meta name="author" content="Corvalán Agustín">
+  <meta name="keywords" content="antiguedades, quinques, tienda de campo">
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="icon" href="/img/logo.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/08c401a154.js" crossorigin="anonymous"></script>
+  <title>El Quinqué - Productos</title>
+</head>
+<body>
+  <!-- HEADER -->
+  <header id="hero">
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="bar-btn">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a class="active" href="#hero">Productos</a></li>
+        <li><a href="galería.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="banner-text">
+      <h1>Productos</h1>
+    </div>
+  </header>
+  <a href="https://api.whatsapp.com/send?phone=3329532510" class="btn-wps" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <!-- END HEADER -->
 
-    <!-- FIRST SECTION -->
-    <section>
-      <div class="first_section">
-        <h2>Antiguedades</h2>
-        <div class="card">
-          <div class="card_img">
-            <img src="img/antiguedades.jpg" alt="" />
+  <!-- MAIN -->
+  <main class="main_products">
+    <!-- PRODUCTS -->
+    <section id="container_productos">
+      <div class="grid">
+
+        <article>
+          <div class="card_img"></div>
+          <div class="card_text">
+            <h3>Naturales</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis nisi facilis pariatur iste, animi
+              ullam
+              aperiam cupiditate facere. Eius, sunt.</p>
+            <button class="card_button">Mas info</button>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi natus
-            aliquid saepe placeat. Aliquam, sapiente.
-          </p>
-          <button>Explorar</button>
-        </div>
-      </div>
-      <div class="first_section">
-        <div class="card">
-          <div class="card_img">
-            <img src="img/antiguedades.jpg" alt="" />
+        </article>
+
+        <article>
+          <div class="card_img-2"></div>
+          <div class="card_text">
+            <h3>Conservas</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis nisi facilis pariatur iste, animi
+              ullam
+              aperiam cupiditate facere. Eius, sunt.</p>
+            <button class="card_button">Mas info</button>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi natus
-            aliquid saepe placeat. Aliquam, sapiente.
-          </p>
-          <button>Explorar</button>
-        </div>
-      </div>
-      <div class="first_section">
-        <div class="card">
-          <div class="card_img">
-            <img src="img/antiguedades.jpg" alt="" />
+        </article>
+
+        <article>
+          <div class="card_img-3"></div>
+          <div class="card_text">
+            <h3>Delicatessen</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis nisi facilis pariatur iste, animi
+              ullam
+              aperiam cupiditate facere. Eius, sunt.</p>
+            <button class="card_button">Mas info</button>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi natus
-            aliquid saepe placeat. Aliquam, sapiente.
-          </p>
-          <button>Explorar</button>
-        </div>
+        </article>
+
+        <article>
+          <div class="card_img-4"></div>
+          <div class="card_text">
+            <h3>Frascos antiguos</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis nisi facilis pariatur iste, animi
+              ullam
+              aperiam cupiditate facere. Eius, sunt.</p>
+            <button class="card_button">Mas info</button>
+          </div>
+        </article>
+
+        <article>
+          <div class="card_img-5"></div>
+          <div class="card_text">
+            <h3>Máquinas de coser</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis nisi facilis pariatur iste, animi
+              ullam
+              aperiam cupiditate facere. Eius, sunt.</p>
+            <button class="card_button">Mas info</button>
+          </div>
+        </article>
+
+        <article>
+          <div class="card_img-6"></div>
+          <div class="card_text">
+            <h3>Téfonos antiguos</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis nisi facilis pariatur iste, animi
+              ullam
+              aperiam cupiditate facere. Eius, sunt.</p>
+            <button class="card_button">Mas info</button>
+          </div>
+        </article>
       </div>
     </section>
-    <!-- END FIRST SECTION -->
+    <!-- END PRODUCTS -->
+  </main>
+  <!-- END MAIN -->
 
-    <!-- SECOND SECTION -->
-    <section>
-        <h2>Delicatessen</h2>
-        <div class="first_section">
-          <div class="card">
-            <div class="card_img">
-                <img src="img/productos-artesanales.jpeg" alt="" />
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi natus
-              aliquid saepe placeat. Aliquam, sapiente.
-            </p>
-            <button>Explorar</button>
-          </div>
-        </div>
-        <div class="first_section">
-          <div class="card">
-            <div class="card_img">
-                <img src="img/productos-artesanales.jpeg" alt="" />
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi natus
-              aliquid saepe placeat. Aliquam, sapiente.
-            </p>
-            <button>Explorar</button>
-          </div>
-        </div>
-        <div class="first_section">
-          <div class="card">
-            <div class="card_img">
-                <img src="img/productos-artesanales.jpeg" alt="" />
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi natus
-              aliquid saepe placeat. Aliquam, sapiente.
-            </p>
-            <button>Explorar</button>
-          </div>
-        </div>
-      </section>
-      <!-- END SECOND SECTION -->
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">
+      <h2 class="website_logo">El Quinqué</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vitae
+        labore dignissimos, voluptatibus, pariatur deserunt vel molestias
+        voluptatum officiis error delectus recusandae perferendis repellendus
+        quam?
+      </p>
+      <div class="socials">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="footer_container">
-        <div class="content">
-          <h3 class="website_logo">El Quinqué</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est neque
-            voluptas velit architecto dicta! Iure?
-          </p>
-        </div>
-      </div>
-      <div class="footer-menus">
-        <div class="content">
-          <span class="menu_title">Servicios</span>
-          <a href="#" class="menu-item">Lorem</a>
-          <a href="#" class="menu-item">Lorem</a>
-          <a href="#" class="menu-item">Lorem</a>
-        </div>
-        <div class="content">
-          <span class="menu_title">Ubicación</span>
-          <p>Alsina, Baradero</p>
-          <p>10 de noviembre 336</p>
-        </div>
-        <div class="footer_container">
-          <span class="menu_title">Nuestras Redes</span>
-          <div class="social_container">
-            <a href="" class="social_link"></a>
-            <a href="" class="social_link"></a>
-            <a href="" class="social_link"></a>
-          </div>
-        </div>
-        <div class="content">
-          <span class="menu_title">Contacto</span>
-          <a href="#" class="menu-item">Lorem</a>
-          <a href="#" class="menu-item">Lorem</a>
-          <a href="#" class="menu-item">Lorem</a>
-        </div>
-      </div>
-      <div class="copyright_container">
-        <span class="copyright">&copy;2022 El Quinqué</span>
-      </div>
-    </footer>
-    <!-- END FOOTER -->
-  </body>
+    <ul class="footer-right">
+      <li>
+        <h3>Menu</h3>
+        <ul class="box">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Galería</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </li>
+
+      <li class="menu">
+        <h3>Legal</h3>
+        <ul class="box">
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+        </ul>
+      </li>
+
+      <li class="contact">
+        <h3>Contacto</h3>
+        <ul class="box">
+          <li><a href="#">elquinque@gmail.com</a></li>
+          <li><a href="#">+54 9 3329 5325-10</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="footer-bottom">
+      <p>Copyright &copy;2022 - Powered by El Quinqué</p>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+</body>
+
 </html>

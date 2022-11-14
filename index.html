@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/index.css" />
+    <meta name="language" content="spanish">
+    <meta name="copyright" content="El Quinque">
+    <meta name="author" content="Corvalán Agustín">
+    <meta name="keywords" content="antiguedades, quinques, tienda de campo">
+    <link rel="stylesheet" href="css/estilos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="icon" href="/img/logo.jpg">
     <script src="https://kit.fontawesome.com/08c401a154.js" crossorigin="anonymous"></script>
     <title>El Quinqué</title>
   </head>
   <body>
     <!-- HEADER -->
-    <header id="hero">
+    <header id="hero-home">
       <nav>
         <input type="checkbox" id="check" />
         <label for="check" class="bar-btn">
@@ -25,12 +30,12 @@
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
-      <div class="banner-text">
+      <div class="banner_text-home">
         <h1>El Quinqué</h1>
         <h2>historias y <span>más...</span></h2>
-        <div class="button-hero">
-          <a href="#" class="button">Explorar</a>
-          <a href="#" class="button">Reservar Ya</a>
+        <div class="button_container">
+          <a href="#" class="button_explore">Explorar</a>
+          <a href="#" class="button_reserv">Reservar Ya</a>
         </div>
       </div>
     </header>
@@ -40,15 +45,15 @@
     <!-- END HEADER -->
 
     <!-- MAIN -->
-    <main>
-      <!-- FIRST SECTION -->
-      <section class="first_section">
-        <div class="container">
-          <div class="title_quinque">
+    <main class="main_home">
+      <!-- WELCOME SECTION -->
+      <section id="welcome_section">
+        <div class="welcome_container">
+          <div class="welcome_title">
             <span>Alsina, Baradero</span>
             <h2>El Quinqué</h2>
           </div>
-          <div class="description">
+          <div class="welcome_description">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim neque eos esse adipisci quae fuga pariatur aliquam accusantium aliquid accusamus culpa maxime sint perspiciatis magnam tenetur, officia rerum deleniti. Eum.
               Quam modi adipisci aliquid minima neque quia ipsum, totam corrupti deleniti optio eveniet culpa nam. In alias saepe ea ut veniam est, tempora aliquid dolorum praesentium placeat doloremque necessitatibus? In?
@@ -56,11 +61,11 @@
               Distinctio aperiam ea minus mollitia facilis minima nesciunt corrupti ducimus sint rem itaque atque, sunt consequuntur optio dolor veritatis possimus porro, nobis velit. Expedita dicta sed ducimus quidem optio autem!
               Aspernatur exercitationem beatae saepe possimus voluptatum autem reiciendis, iusto fugiat impedit id odit doloremque ipsa illo aliquam voluptas? Modi quis quisquam beatae accusantium consectetur ipsum nemo aut iure repellendus aperiam.
             </p>
-            <button class="button productos">Productos</button>
+            <button class="button_description">Productos</button>
           </div>
         </div>
       </section>
-      <!-- END FIRST SECTION -->
+      <!-- END WELCOME SECTION -->
     </main>
     <!-- END MAIN -->
 
@@ -112,7 +117,7 @@
       </ul>
 
       <div class="footer-bottom">
-        <p>Copyright &copy; 2022 - Powered by El Quinqué</p>
+        <p>Copyright &copy;2022 - Powered by El Quinqué</p>
       </div>
     </footer>
     <!-- END FOOTER -->
