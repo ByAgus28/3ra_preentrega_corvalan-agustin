@@ -514,11 +514,19 @@ p:nth-child(3) {
 }
 
 .about-us_description2 {
-  @extend .about-us_description;
+  grid-area: parrafo_dos;
+  text-align: justify;
+  padding: 10px 25px 0px 25px;
+  overflow: hidden;
+  max-height: 260px;
 }
 
 .about-us_description3 {
-  @extend .about-us_description;
+  grid-area: parrafo_tres;
+  text-align: justify;
+  padding: 10px 25px 0px 25px;
+  overflow: hidden;
+  max-height: 260px;
 }
 
 /* OUR HISTORY SECTION */
@@ -537,7 +545,7 @@ p:nth-child(3) {
 }
 
 .our-history_title h2 {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .our-history_title::after {
@@ -545,7 +553,7 @@ p:nth-child(3) {
   content: "";
   width: 130px;
   height: 3px;
-  background: $color-principal;
+  background: rgb(211, 110, 112);
   top: 256vh;
   left: 34vw;
 }
@@ -561,9 +569,14 @@ p:nth-child(3) {
 }
 
 .our-history_description4 {
-  @extend .about-us_description;
+  text-align: justify;
+  padding: 10px 25px 0px 25px;
+  grid-area: parrafo_cuatro;
+  margin: 10px 0px 20px 0px;
+  max-height: 210px;
   overflow: hidden;
 }
+
 
 @media (min-width: $tamaño-tablet) {
   /* BANNER TEXT */
