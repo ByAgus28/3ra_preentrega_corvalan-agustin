@@ -1,15 +1,8 @@
 @charset "UTF-8";
 /* VARIABLES */
+/* GOOGLE FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
-.button .description {
-  background-color: #be9858;
-  color: white;
-  font-size: 16px;
-  margin-left: 0;
-}
-
-/* GOOGLE FONTS */
 /* CSS RESET */
 * {
   box-sizing: border-box;
@@ -101,7 +94,7 @@ nav {
 .bar-btn {
   font-size: 2em;
   color: #fff;
-  margin-right: 20px;
+  margin-right: 15px;
   cursor: pointer;
   margin-left: auto;
   margin-top: 20px;
@@ -252,12 +245,12 @@ nav {
   color: rgb(211, 110, 112);
 }
 
-/* FIRST SECTION*/
+/* FIRST SECTION */
 #welcome_section {
   background-color: rgb(239, 239, 239);
   padding: 25px 15px;
   width: 100%;
-  height: 600px;
+  height: 825px;
   overflow: hidden;
 }
 
@@ -279,17 +272,28 @@ nav {
 
 .welcome_title span {
   font-size: 18px;
-  max-width: 100px;
-  border-bottom: 2px solid rgb(211, 110, 112);
+  position: relative;
+}
+
+.welcome_title > span::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background: rgb(211, 110, 112);
+  bottom: -25%;
+  left: 0;
 }
 
 .welcome_description {
   text-align: justify;
   font-size: 16px;
-  max-width: 360px;
-  max-height: 450px;
-  overflow: hidden;
+  max-width: 340px;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
   padding: 0px 10px 0px 10px;
+  line-height: 2em;
 }
 
 p:nth-child(3) {
@@ -521,7 +525,7 @@ footer h3 {
   }
 }
 /* HEADER - HERO */
-#hero {
+#hero-about_us {
   width: 100%;
   height: 60vh;
   background-repeat: no-repeat;
@@ -539,19 +543,21 @@ footer h3 {
   margin-left: 15px;
 }
 
-.banner-text::before {
-  position: absolute;
+.banner-text > h1::before {
   content: "";
-  width: 80px;
-  border: 2px solid rgb(211, 110, 112);
-  top: 20vh;
-  left: 4.5vw;
+  position: absolute;
+  height: 5px;
+  width: 1.5em;
+  background: rgb(211, 110, 112);
+  top: -10%;
+  left: 1%;
 }
 
 .banner-text h1 {
   font-size: 3.6em;
   color: rgb(230, 230, 230);
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
 /* MAIN ABOUT US */
@@ -571,16 +577,18 @@ footer h3 {
 .about-us_title {
   grid-area: titulo;
   text-align: center;
+  position: relative;
 }
 
 .about-us_title::after {
-  position: absolute;
   content: "";
-  width: 130px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 8em;
   height: 3px;
   background: rgb(211, 110, 112);
-  top: 79vh;
-  left: 33vw;
+  transform: translateX(-50%);
 }
 
 .about-us_title h2 {
@@ -593,6 +601,7 @@ footer h3 {
   padding: 10px 25px 0px 25px;
   overflow: hidden;
   max-height: 260px;
+  line-height: 2em;
 }
 
 .about-us_description2 {
@@ -601,6 +610,7 @@ footer h3 {
   padding: 10px 25px 0px 25px;
   overflow: hidden;
   max-height: 260px;
+  line-height: 2em;
 }
 
 .about-us_description3 {
@@ -608,7 +618,8 @@ footer h3 {
   text-align: justify;
   padding: 10px 25px 0px 25px;
   overflow: hidden;
-  max-height: 260px;
+  max-height: 200px;
+  line-height: 2em;
 }
 
 /* OUR HISTORY SECTION */
@@ -625,17 +636,19 @@ footer h3 {
 }
 
 .our-history_title h2 {
-  margin-top: 20px;
+  margin-top: -50px;
+  position: relative;
 }
 
-.our-history_title::after {
-  position: absolute;
+.our-history_title > h2::after {
   content: "";
-  width: 130px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 3em;
   height: 3px;
   background: rgb(211, 110, 112);
-  top: 256vh;
-  left: 34vw;
+  transform: translateX(-50%);
 }
 
 .img_our-history {
@@ -653,8 +666,10 @@ footer h3 {
   padding: 10px 25px 0px 25px;
   grid-area: parrafo_cuatro;
   margin: 10px 0px 20px 0px;
-  max-height: 210px;
-  overflow: hidden;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  line-height: 2em;
 }
 
 @media (min-width: 768px) {
@@ -665,14 +680,6 @@ footer h3 {
     justify-content: start;
     padding: 0 2em;
     color: #fff;
-  }
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid rgb(211, 110, 112);
-    top: 22vh;
-    left: 4vw;
   }
   .banner-text h1 {
     font-size: 5em;
@@ -693,12 +700,9 @@ footer h3 {
     font-size: 3.5em;
   }
   .about-us_title::after {
-    content: "";
-    width: 130px;
-    height: 4px;
-    background: rgb(211, 110, 112);
-    top: 80vh;
-    left: 44vw;
+    bottom: 11%;
+    width: 10em;
+    height: 3.5px;
   }
   .about-us_description {
     grid-area: parrafo1;
@@ -732,13 +736,10 @@ footer h3 {
     margin: 25px 0px 60px 0px;
     font-size: 3.5em;
   }
-  .our-history_title::after {
-    content: "";
-    width: 130px;
-    height: 4px;
-    background: rgb(211, 110, 112);
-    top: 172vh;
-    left: 44vw;
+  .our-history_title > h2::after {
+    bottom: 0;
+    width: 3em;
+    height: 3.5px;
   }
   .img_our-history {
     grid-area: img;
@@ -759,32 +760,17 @@ footer h3 {
 }
 @media (min-width: 1024px) {
   /* TITLES */
-  .title::after {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 1.5px solid rgb(211, 110, 112);
-    top: 77vh;
-    left: 44vw;
-  }
-  .title_dos::after {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 1.5px solid rgb(211, 110, 112);
-    top: 152vh;
-    left: 44vw;
-  }
-  /* BANNER TEXT */
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid rgb(211, 110, 112);
-    top: 20vh;
-    left: 3.6vw;
-  }
 }
+/* HERO PRODUCTS */
+#hero-products {
+  width: 100%;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero-2.jpeg");
+}
+
 /* PRODUCTS */
 .main_productos {
   background-color: rgb(239, 239, 239);
@@ -807,6 +793,7 @@ footer h3 {
   width: 325px;
   height: 480px;
   transition: trasform 0.3s;
+  margin: auto;
 }
 
 .grid > article:hover {
@@ -898,29 +885,6 @@ footer h3 {
   .nav-menu li a {
     font-size: 0.8em;
   }
-  /* BANNER TEXT */
-  .banner-text {
-    height: 35%;
-    display: flex;
-    justify-content: start;
-    padding: 0 2em;
-    color: #fff;
-  }
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid rgb(211, 110, 112);
-    top: 22vh;
-    left: 4vw;
-  }
-  .banner-text h1 {
-    font-size: 5em;
-    margin-bottom: 0;
-  }
-  .banner-text h2 span {
-    color: rgb(211, 110, 112);
-  }
   /* CARDS PRODUCTS */
   .grid {
     grid-template-columns: repeat(3, 1fr);
@@ -978,15 +942,6 @@ footer h3 {
   }
 }
 @media (min-width: 1024px) {
-  /* BANNER TEXT */
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid rgb(211, 110, 112);
-    top: 20vh;
-    left: 3.6vw;
-  }
   .grid {
     grid-template-columns: repeat(3, 1fr);
     margin: 75px 65px;
@@ -998,6 +953,16 @@ footer h3 {
     height: max-content;
   }
 }
+/* HERO GALLERY */
+#hero-gallery {
+  width: 100%;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero-3.jpg");
+}
+
 /* GALLERY */
 .main_gallery {
   background-color: rgb(239, 239, 239);
@@ -1040,26 +1005,6 @@ footer h3 {
   }
   .nav-menu li a {
     font-size: 0.8em;
-  }
-  /* BANNER TEXT */
-  .banner-text {
-    height: 35%;
-    display: flex;
-    justify-content: start;
-    padding: 0 2em;
-    color: #fff;
-  }
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid rgb(211, 110, 112);
-    top: 22vh;
-    left: 4vw;
-  }
-  .banner-text h1 {
-    font-size: 5em;
-    margin-bottom: 0;
   }
   /* GALLERY */
   .gallery-container {
@@ -1118,15 +1063,6 @@ footer h3 {
   }
 }
 @media (min-width: 1024px) {
-  /* BANNER TEXT */
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid rgb(211, 110, 112);
-    top: 20vh;
-    left: 3.6vw;
-  }
   /* GALLERY */
   .gallery-container {
     grid-template-columns: repeat(5, 1fr);
@@ -1142,6 +1078,16 @@ footer h3 {
     grid-row-start: span 3;
   }
 }
+/* HERO CONTACT */
+#hero-contact {
+  width: 100%;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero-4.jpg");
+}
+
 /* CONTACT FORM */
 .main_contact {
   background-color: rgb(239, 239, 239);
@@ -1254,13 +1200,13 @@ footer h3 {
   padding: 1.75rem 1rem;
   border-top: none;
   border-radius: 0px 0px 10px 10px;
+  background-color: white;
 }
 
 #contact .contact_container .contact-content .content-form label {
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
-  color: gray;
   margin-bottom: 0.5rem;
 }
 
@@ -1270,7 +1216,6 @@ footer h3 {
   width: 100%;
   font-size: 18px;
   padding: 0.375rem 0.75rem;
-  color: gray;
   border: 1px solid gray;
   margin-bottom: 1.5rem;
   border-radius: 5px;
@@ -1291,6 +1236,14 @@ footer h3 {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+#contact .contact_container .contact-content .content-form input[type=submit]:hover {
+  background-color: transparent;
+  border: 1px solid rgb(211, 110, 112);
+  color: rgb(211, 110, 112);
 }
 
 @media (min-width: 768px) {
@@ -1325,14 +1278,6 @@ footer h3 {
     justify-content: start;
     padding: 0 2em;
     color: #fff;
-  }
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid rgb(211, 110, 112);
-    top: 22vh;
-    left: 4vw;
   }
   .banner-text h1 {
     font-size: 5em;
@@ -1389,15 +1334,6 @@ footer h3 {
   }
 }
 @media (min-width: 1024px) {
-  /* BANNER TEXT */
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid rgb(211, 110, 112);
-    top: 20vh;
-    left: 3.6vw;
-  }
   /* CONTACT FORM */
   #contact .contact_container {
     max-width: 100%;

@@ -38,7 +38,7 @@ nav {
 .bar-btn {
   font-size: 2em;
   color: #fff;
-  margin-right: 20px;
+  margin-right: 15px;
   cursor: pointer;
   margin-left: auto;
   margin-top: 20px;
@@ -208,12 +208,12 @@ nav {
   color: $color-principal;
 }
 
-/* FIRST SECTION*/
+/* FIRST SECTION */
 #welcome_section {
   background-color: rgb(239, 239, 239);
   padding: 25px 15px;
   width: 100%;
-  height: 600px;
+  height: 825px;
   overflow: hidden;
 }
 
@@ -235,17 +235,26 @@ nav {
 
 .welcome_title span {
   font-size: 18px;
-  max-width: 100px;
-  border-bottom: 2px solid $color-principal;
+  position: relative;
+}
+
+.welcome_title > span::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background: $color-principal;
+  bottom: -25%;
+  left: 0;
 }
 
 .welcome_description {
   text-align: justify;
   font-size: 16px;
-  max-width: 360px;
-  max-height: 450px;
-  overflow: hidden;
+  max-width: 340px;
+  max-height: max-content;
   padding: 0px 10px 0px 10px;
+  line-height: 2em;
 }
 
 p:nth-child(3) {
@@ -431,7 +440,7 @@ p:nth-child(3) {
 //*! ---------------------------------------SOBRE NOSOTROS---------------------------------------- !*/
 
 /* HEADER - HERO */
-#hero {
+#hero-about_us {
   width: 100%;
   height: 60vh;
   background-repeat: no-repeat;
@@ -454,19 +463,21 @@ p:nth-child(3) {
   margin-left: 15px;
 }
 
-.banner-text::before {
+.banner-text > h1::before {
+  content: '';
   position: absolute;
-  content: "";
-  width: 80px;
-  border: 2px solid $color-principal;
-  top: 20vh;
-  left: 4.5vw;
+  height: 5px;
+  width: 1.5em;
+  background: $color-principal;
+  top: -10%;
+  left: 1%;
 }
 
 .banner-text h1 {
   font-size: 3.6em;
   color: rgb(230, 230, 230);
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
 /* MAIN ABOUT US */
@@ -489,16 +500,18 @@ p:nth-child(3) {
 .about-us_title {
   grid-area: titulo;
   text-align: center;
+  position: relative;
 }
 
 .about-us_title::after {
-  position: absolute;
   content: "";
-  width: 130px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 8em;
   height: 3px;
   background: $color-principal;
-  top: 79vh;
-  left: 33vw;
+  transform: translateX(-50%);
 }
 
 .about-us_title h2 {
@@ -511,6 +524,7 @@ p:nth-child(3) {
   padding: 10px 25px 0px 25px;
   overflow: hidden;
   max-height: 260px;
+  line-height: 2em;
 }
 
 .about-us_description2 {
@@ -519,6 +533,7 @@ p:nth-child(3) {
   padding: 10px 25px 0px 25px;
   overflow: hidden;
   max-height: 260px;
+  line-height: 2em;
 }
 
 .about-us_description3 {
@@ -526,7 +541,8 @@ p:nth-child(3) {
   text-align: justify;
   padding: 10px 25px 0px 25px;
   overflow: hidden;
-  max-height: 260px;
+  max-height: 200px;
+  line-height: 2em;
 }
 
 /* OUR HISTORY SECTION */
@@ -545,17 +561,19 @@ p:nth-child(3) {
 }
 
 .our-history_title h2 {
-  margin-top: 20px;
+  margin-top: -50px;
+  position: relative;
 }
 
-.our-history_title::after {
-  position: absolute;
+.our-history_title > h2::after {
   content: "";
-  width: 130px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 3em;
   height: 3px;
-  background: rgb(211, 110, 112);
-  top: 256vh;
-  left: 34vw;
+  background: $color-principal;
+  transform: translateX(-50%);
 }
 
 .img_our-history {
@@ -573,10 +591,9 @@ p:nth-child(3) {
   padding: 10px 25px 0px 25px;
   grid-area: parrafo_cuatro;
   margin: 10px 0px 20px 0px;
-  max-height: 210px;
-  overflow: hidden;
+  max-height: max-content;
+  line-height: 2em;
 }
-
 
 @media (min-width: $tamaño-tablet) {
   /* BANNER TEXT */
@@ -586,15 +603,6 @@ p:nth-child(3) {
     justify-content: start;
     padding: 0 2em;
     color: #fff;
-  }
-
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid $color-principal;
-    top: 22vh;
-    left: 4vw;
   }
 
   .banner-text h1 {
@@ -624,12 +632,9 @@ p:nth-child(3) {
   }
 
   .about-us_title::after {
-    content: "";
-    width: 130px;
-    height: 4px;
-    background: $color-principal;
-    top: 80vh;
-    left: 44vw;
+    bottom: 11%;
+    width: 10em;
+    height: 3.5px;
   }
 
   .about-us_description {
@@ -667,13 +672,10 @@ p:nth-child(3) {
     font-size: 3.5em;
   }
 
-  .our-history_title::after {
-    content: "";
-    width: 130px;
-    height: 4px;
-    background: $color-principal;
-    top: 172vh;
-    left: 44vw;
+  .our-history_title > h2::after {
+    bottom: 0;
+    width: 3em;
+    height: 3.5px;
   }
 
   .img_our-history {
@@ -695,35 +697,24 @@ p:nth-child(3) {
 }
 @media (min-width: $tamaño-desktop) {
   /* TITLES */
-  .title::after {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 1.5px solid $color-principal;
-    top: 77vh;
-    left: 44vw;
-  }
-
-  .title_dos::after {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 1.5px solid $color-principal;
-    top: 152vh;
-    left: 44vw;
-  }
-  /* BANNER TEXT */
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid $color-principal;
-    top: 20vh;
-    left: 3.6vw;
-  }
 }
 
 //*! -----------------------------------------PRODUCTOS------------------------------------------ !*/
+/* HERO PRODUCTS */
+
+#hero-products {
+  width: 100%;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../img/hero-2.jpeg");
+}
 
 /* PRODUCTS */
 .main_productos {
@@ -759,33 +750,6 @@ p:nth-child(3) {
 
   .nav-menu li a {
     font-size: 0.8em;
-  }
-
-  /* BANNER TEXT */
-  .banner-text {
-    height: 35%;
-    display: flex;
-    justify-content: start;
-    padding: 0 2em;
-    color: #fff;
-  }
-
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid $color-principal;
-    top: 22vh;
-    left: 4vw;
-  }
-
-  .banner-text h1 {
-    font-size: 5em;
-    margin-bottom: 0;
-  }
-
-  .banner-text h2 span {
-    color: $color-principal;
   }
 
   /* CARDS PRODUCTS */
@@ -854,16 +818,6 @@ p:nth-child(3) {
   }
 }
 @media (min-width: $tamaño_desktop) {
-  /* BANNER TEXT */
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid $color-principal;
-    top: 20vh;
-    left: 3.6vw;
-  }
-
   .grid {
     grid-template-columns: repeat(3, 1fr);
     margin: 75px 65px;
@@ -876,6 +830,21 @@ p:nth-child(3) {
 }
 
 //*! -------------------------------------------GALERIA------------------------------------------- !*/
+/* HERO GALLERY */
+
+#hero-gallery {
+  width: 100%;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../img/hero-3.jpg");
+}
 
 /* GALLERY */
 .main_gallery {
@@ -912,29 +881,6 @@ p:nth-child(3) {
 
   .nav-menu li a {
     font-size: 0.8em;
-  }
-
-  /* BANNER TEXT */
-  .banner-text {
-    height: 35%;
-    display: flex;
-    justify-content: start;
-    padding: 0 2em;
-    color: #fff;
-  }
-
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid $color-principal;
-    top: 22vh;
-    left: 4vw;
-  }
-
-  .banner-text h1 {
-    font-size: 5em;
-    margin-bottom: 0;
   }
 
   /* GALLERY */
@@ -1006,16 +952,6 @@ p:nth-child(3) {
   }
 }
 @media (min-width: $tamaño_desktop) {
-  /* BANNER TEXT */
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid $color-principal;
-    top: 20vh;
-    left: 3.6vw;
-  }
-
   /* GALLERY */
   .gallery-container {
     grid-template-columns: repeat(5, 1fr);
@@ -1035,6 +971,21 @@ p:nth-child(3) {
 }
 
 //*! -------------------------------------------CONTACTO------------------------------------------ !*/
+/* HERO CONTACT */
+
+#hero-contact {
+  width: 100%;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../img/hero-4.jpg");
+}
 
 /* CONTACT FORM */
 .main_contact {
@@ -1079,15 +1030,6 @@ p:nth-child(3) {
     justify-content: start;
     padding: 0 2em;
     color: #fff;
-  }
-
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid $color-principal;
-    top: 22vh;
-    left: 4vw;
   }
 
   .banner-text h1 {
@@ -1157,16 +1099,6 @@ p:nth-child(3) {
   }
 }
 @media (min-width: $tamaño_desktop) {
-  /* BANNER TEXT */
-  .banner-text::before {
-    position: absolute;
-    content: "";
-    width: 130px;
-    border: 2px solid $color-principal;
-    top: 20vh;
-    left: 3.6vw;
-  }
-
   /* CONTACT FORM */
   #contact .contact_container {
     max-width: 100%;
